@@ -1,4 +1,4 @@
-function CVPreview(personalInfo) {
+function CVPreview({ personalInfo }) {
   return (
     <>
       <p>
