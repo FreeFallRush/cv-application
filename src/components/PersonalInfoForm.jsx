@@ -1,3 +1,5 @@
+import "../styles/PersonalInfoForm.css";
+
 function PersonalInfoForm({ personalInfo, setPersonalInfo }) {
   const handleChange = (e) => {
     setPersonalInfo({ ...personalInfo, [e.target.name]: e.target.value });
@@ -5,7 +7,7 @@ function PersonalInfoForm({ personalInfo, setPersonalInfo }) {
 
   return (
     <>
-      <h2>Add Personal Info</h2>
+      <h2>Add / Edit Personal Info</h2>
       <form>
         <input
           name="firstName"
