@@ -1,69 +1,80 @@
+import { useState } from "react";
 import "../styles/PersonalInfoForm.css";
 
-function PersonalInfoForm({ personalInfo, setPersonalInfo }) {
+function PersonalInfoForm({ personalInfo, onSubmit }) {
+  const [isEditing, setIsEditing] = useState(false);
+  const [formData, setFormData] = useState(personalInfo);
+
   const handleChange = (e) => {
-    setPersonalInfo({ ...personalInfo, [e.target.name]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit(formData); // pass new data up to App.jsx
+    setIsEditing(false);
   };
 
   return (
-    <>
-      <h2>Add / Edit Personal Info</h2>
-      <form>
-        <input
-          name="firstName"
-          maxLength={60}
-          type="text"
-          placeholder="First Name"
-          value={personalInfo.firstName}
-          onChange={handleChange}
-        />
+    <div className="personalInfoForm">
+      {!isEditing ? (
+        <button className="edit-btn" onClick={() => setIsEditing(true)}>
+          Add / Edit Personal Info
+        </button>
+      ) : (
+        <>
+          <h2>Personal Info</h2>
+          <form onSubmit={handleSubmit}>
+            <input
+              name="firstName"
+              type="text"
+              placeholder="First Name"
+              value={formData.firstName}
+              onChange={handleChange}
+            />
+            <input
+              name="lastName"
+              type="text"
+              placeholder="Last Name"
+              value={formData.lastName}
+              onChange={handleChange}
+            />
+            <input
+              name="email"
+              type="text"
+              placeholder="E-mail"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            <input
+              name="phoneNumber"
+              type="text"
+              placeholder="Phone Number"
+              value={formData.phoneNumber}
+              onChange={handleChange}
+            />
+            <input
+              name="city"
+              type="text"
+              placeholder="City"
+              value={formData.city}
+              onChange={handleChange}
+            />
+            <input
+              name="country"
+              type="text"
+              placeholder="Country"
+              value={formData.country}
+              onChange={handleChange}
+            />
 
-        <input
-          name="lastName"
-          type="text"
-          maxLength={60}
-          placeholder="Last Name"
-          value={personalInfo.lastName}
-          onChange={handleChange}
-        />
-
-        <input
-          name="email"
-          maxLength={60}
-          type="text"
-          placeholder="E-mail"
-          value={personalInfo.email}
-          onChange={handleChange}
-        />
-
-        <input
-          name="phoneNumber"
-          maxLength={60}
-          type="text"
-          placeholder="Phone Number"
-          value={personalInfo.phoneNumber}
-          onChange={handleChange}
-        />
-
-        <input
-          name="city"
-          maxLength={60}
-          type="text"
-          placeholder="City"
-          value={personalInfo.city}
-          onChange={handleChange}
-        />
-
-        <input
-          name="country"
-          maxLength={60}
-          type="text"
-          placeholder="Country"
-          value={personalInfo.country}
-          onChange={handleChange}
-        />
-      </form>
-    </>
+            <button type="submit" className="submit-btn">
+              Submit
+            </button>
+          </form>
+        </>
+      )}
+    </div>
   );
 }
 

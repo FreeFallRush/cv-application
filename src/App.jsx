@@ -13,14 +13,12 @@ function App() {
     city: "Rome",
     country: "Italy",
   };
-  const [personalInfo, setPersonalInfo] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-    city: "",
-    country: "",
-  });
+
+  const [personalInfo, setPersonalInfo] = useState(defaultInfo);
+
+  const handlePersonalInfoSubmit = (newInfo) => {
+    setPersonalInfo(newInfo); // update state with new values
+  };
 
   return (
     <>
@@ -30,10 +28,11 @@ function App() {
           <section className="personalInfo-form">
             <PersonalInfoForm
               personalInfo={personalInfo}
-              setPersonalInfo={setPersonalInfo}
+              onSubmit={handlePersonalInfoSubmit}
             />
           </section>
         </aside>
+
         <section className="preview-section">
           <CVPreview personalInfo={personalInfo} defaultInfo={defaultInfo} />
         </section>
