@@ -26,7 +26,7 @@ function EducationInfoForm({ educationInfo, onSubmit }) {
           <h2>Education</h2>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <label for="school">School: </label>
+              <label htmlFor="school">School: </label>
               <input
                 id="school"
                 name="school"
@@ -38,7 +38,7 @@ function EducationInfoForm({ educationInfo, onSubmit }) {
             </div>
 
             <div className="form-group">
-              <label for="degree">Degree: </label>
+              <label htmlFor="degree">Degree: </label>
               <input
                 id="degree"
                 name="degree"
@@ -50,7 +50,7 @@ function EducationInfoForm({ educationInfo, onSubmit }) {
             </div>
 
             <div className="form-group">
-              <label for="startDate">Start Date: </label>
+              <label htmlFor="startDate">Start Date: </label>
               <input
                 id="startDate"
                 name="startDate"
@@ -61,7 +61,7 @@ function EducationInfoForm({ educationInfo, onSubmit }) {
             </div>
 
             <div className="form-group">
-              <label for="endDate">End Date: </label>
+              <label htmlFor="endDate">End Date: </label>
               <input
                 id="endDate"
                 name="endDate"
