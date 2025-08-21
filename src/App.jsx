@@ -25,11 +25,19 @@ function App() {
   return (
     <>
       <Header />
-      <PersonalInfoForm
-        personalInfo={personalInfo}
-        setPersonalInfo={setPersonalInfo}
-      />
-      <CVPreview personalInfo={personalInfo} defaultInfo={defaultInfo} />
+      <main className="content">
+        <aside className="sidebar">
+          <section className="personalInfo-form">
+            <PersonalInfoForm
+              personalInfo={personalInfo}
+              setPersonalInfo={setPersonalInfo}
+            />
+          </section>
+        </aside>
+        <section className="preview-section">
+          <CVPreview personalInfo={personalInfo} defaultInfo={defaultInfo} />
+        </section>
+      </main>
     </>
   );
 }
