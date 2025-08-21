@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/PersonalInfoForm.css";
+import "../styles/FormStyles.css";
 
 function PersonalInfoForm({ personalInfo, onSubmit }) {
   const [isEditing, setIsEditing] = useState(false);
