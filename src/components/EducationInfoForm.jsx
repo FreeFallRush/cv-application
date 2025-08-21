@@ -25,22 +25,51 @@ function EducationInfoForm({ educationInfo, onSubmit }) {
         <>
           <h2>Education</h2>
           <form onSubmit={handleSubmit}>
-            <input
-              name="school"
-              type="text"
-              placeholder="School"
-              value={formData.school}
-              onChange={handleChange}
-            />
+            <div className="form-group">
+              <label for="school">School: </label>
+              <input
+                id="school"
+                name="school"
+                type="text"
+                placeholder="School"
+                value={formData.school}
+                onChange={handleChange}
+              />
+            </div>
 
-            <input
-              name="degree"
-              type="text"
-              placeholder="Degree"
-              value={formData.degree}
-              onChange={handleChange}
-            />
+            <div className="form-group">
+              <label for="degree">Degree: </label>
+              <input
+                id="degree"
+                name="degree"
+                type="text"
+                placeholder="Degree"
+                value={formData.degree}
+                onChange={handleChange}
+              />
+            </div>
 
+            <div className="form-group">
+              <label for="startDate">Start Date: </label>
+              <input
+                id="startDate"
+                name="startDate"
+                type="date"
+                value={formData.startDate}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="form-group">
+              <label for="endDate">End Date: </label>
+              <input
+                id="endDate"
+                name="endDate"
+                type="date"
+                value={formData.endDate}
+                onChange={handleChange}
+              />
+            </div>
             <button type="submit" className="submit-btn">
               Submit
             </button>

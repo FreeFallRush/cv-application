@@ -14,11 +14,11 @@
 .personalInfoForm input,
 .educationInfoForm input {
   display: block;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.9rem;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 6px;
-  width: 100%;
+  width: 80%;
 }
 
 .edit-btn,
@@ -37,4 +37,21 @@
 .edit-btn:hover,
 .submit-btn:hover {
   background-color: #6e6e6e;
+}
+
+.form-group {
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.form-group label {
+  flex: 0 0 120px;
+  margin-right: 0.6rem;
+  font-weight: bold;
+}
+
+.form-group input {
+  flex: 1;
 }
