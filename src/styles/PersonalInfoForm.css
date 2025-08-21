@@ -1,5 +1,8 @@
 .personalInfoForm {
+  border: 1px solid blue;
   margin-bottom: 1.5rem;
+  padding: 1rem;
+  text-align: center;
 }
 
 .personalInfoForm h2 {
@@ -17,7 +20,7 @@
 
 .edit-btn,
 .submit-btn {
-  background-color: #007bff;
+  background-color: #292929;
   color: white;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -30,5 +33,5 @@
 
 .edit-btn:hover,
 .submit-btn:hover {
-  background-color: #0056b3;
+  background-color: #6e6e6e;
 }

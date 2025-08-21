@@ -7,30 +7,36 @@ function CVPreview({ personalInfo, defaultInfo }) {
       <div className="personalInfo-section">
         <h3>Personal Info</h3>
         <div className="personalInfo">
-          <p>
-            <strong>First Name: </strong>
-            {personalInfo.firstName || defaultInfo.firstName}
-          </p>
-          <p>
-            <strong>Last Name: </strong>
-            {personalInfo.lastName || defaultInfo.lastName}
-          </p>
-          <p>
-            <strong>E-mail: </strong>
-            {personalInfo.email || defaultInfo.email}
-          </p>
-          <p>
-            <strong>Phone Number: </strong>
-            {personalInfo.phoneNumber || defaultInfo.phoneNumber}
-          </p>
-          <p>
-            <strong>City: </strong>
-            {personalInfo.city || defaultInfo.city}
-          </p>
-          <p>
-            <strong>Country: </strong>
-            {personalInfo.country || defaultInfo.country}
-          </p>
+          <div className="personalInfo-group">
+            <p>
+              <strong>First Name: </strong>
+              {personalInfo.firstName || defaultInfo.firstName}
+            </p>
+            <p>
+              <strong>Last Name: </strong>
+              {personalInfo.lastName || defaultInfo.lastName}
+            </p>
+          </div>
+          <div className="personalInfo-group">
+            <p>
+              <strong>E-mail: </strong>
+              {personalInfo.email || defaultInfo.email}
+            </p>
+            <p>
+              <strong>Phone Number: </strong>
+              {personalInfo.phoneNumber || defaultInfo.phoneNumber}
+            </p>
+          </div>
+          <div className="personalInfo-group">
+            <p>
+              <strong>City: </strong>
+              {personalInfo.city || defaultInfo.city}
+            </p>
+            <p>
+              <strong>Country: </strong>
+              {personalInfo.country || defaultInfo.country}
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -1,14 +1,21 @@
 .cv-preview {
   min-width: 80%;
   margin: 4rem;
-  padding: 1.3rem 0;
+  /* padding: 1.3rem 0; */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
+  /* align-items: center; */
   border: 1px solid green;
 }
 
 .personalInfo {
   display: flex;
+  /* justify-content: center; */
+  justify-content: space-between;
   padding: 0.8rem;
+}
+
+.personalInfo-group {
+  margin-left: 2rem;
 }
