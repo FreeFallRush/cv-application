@@ -1,4 +1,5 @@
 import "../styles/CVPreview.css";
+import { formatDate } from "../utils/formatDate";
 
 function CVPreview({
   personalInfo,
@@ -54,6 +55,12 @@ function CVPreview({
             <p>
               <strong>Degree: </strong>
               {educationInfo.degree || defaultEducation.degree}
+              <p>
+                <strong>Period: </strong> {formatDate(educationInfo.startDate)}{" "}
+                -{" "}
+                {formatDate(educationInfo.endDate) ||
+                  defaultEducation.startDate - defaultEducation.endDate}
+              </p>
             </p>
           </div>
         </div>

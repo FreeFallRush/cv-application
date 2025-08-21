@@ -18,12 +18,14 @@ function App() {
   const defaultEducation = {
     school: "Chicago High School",
     degree: "Social Sciences",
+    startDate: "2020 August",
+    endDate: "2024 September",
   };
   const [personalInfo, setPersonalInfo] = useState(defaultInfo);
   const [educationInfo, setEducationInfo] = useState(defaultEducation);
 
   const handlePersonalInfoSubmit = (newInfo) => {
-    setPersonalInfo(newInfo); // update state with new values
+    setPersonalInfo(newInfo);
   };
 
   const handleEducationInfoSubmit = (newEdInfo) => {
