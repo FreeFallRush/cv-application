@@ -5,18 +5,22 @@ import CVPreview from "./components/CVPreview";
 import "./App.css";
 
 function App() {
-  const [personalInfo, setPersonalInfo] = useState({
-    firstName: "Test FirstName",
-    lastName: "Test LastName",
-    email: "testing@office.com",
+  const defaultInfo = {
+    firstName: "Click",
+    lastName: "Link",
+    email: "click@office.com",
     phoneNumber: "+44 768 521 55",
-  });
-
-  const [submittedInfo, setSubmittedInfo] = useState(personalInfo);
-
-  const handleSubmit = () => {
-    setSubmittedInfo(personalInfo);
+    city: "Rome",
+    country: "Italy",
   };
+  const [personalInfo, setPersonalInfo] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    city: "",
+    country: "",
+  });
 
   return (
     <>
@@ -24,9 +28,8 @@ function App() {
       <PersonalInfoForm
         personalInfo={personalInfo}
         setPersonalInfo={setPersonalInfo}
-        onSubmit={handleSubmit}
       />
-      <CVPreview personalInfo={submittedInfo} />
+      <CVPreview personalInfo={personalInfo} defaultInfo={defaultInfo} />
     </>
   );
 }

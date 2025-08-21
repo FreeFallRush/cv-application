@@ -1,4 +1,4 @@
-function PersonalInfoForm({ personalInfo, setPersonalInfo, onSubmit }) {
+function PersonalInfoForm({ personalInfo, setPersonalInfo }) {
   const handleChange = (e) => {
     setPersonalInfo({ ...personalInfo, [e.target.name]: e.target.value });
   };
@@ -6,12 +6,7 @@ function PersonalInfoForm({ personalInfo, setPersonalInfo, onSubmit }) {
   return (
     <>
       <h2>Add Personal Info</h2>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          onSubmit();
-        }}
-      >
+      <form>
         <input
           name="firstName"
           maxLength={60}
@@ -47,7 +42,24 @@ function PersonalInfoForm({ personalInfo, setPersonalInfo, onSubmit }) {
           value={personalInfo.phoneNumber}
           onChange={handleChange}
         />
-        <button type="submit">Submit</button>
+
+        <input
+          name="city"
+          maxLength={60}
+          type="text"
+          placeholder="City"
+          value={personalInfo.city}
+          onChange={handleChange}
+        />
+
+        <input
+          name="country"
+          maxLength={60}
+          type="text"
+          placeholder="Country"
+          value={personalInfo.country}
+          onChange={handleChange}
+        />
       </form>
     </>
   );
