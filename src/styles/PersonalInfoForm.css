@@ -1,15 +1,18 @@
-.personalInfoForm {
+.personalInfoForm,
+.educationInfoForm {
   border: 1px solid blue;
   margin-bottom: 1.5rem;
   padding: 1rem;
   text-align: center;
 }
 
-.personalInfoForm h2 {
+.personalInfoForm h2,
+.educationInfoForm h2 {
   margin-bottom: 1rem;
 }
 
-.personalInfoForm input {
+.personalInfoForm input,
+.educationInfoForm input {
   display: block;
   margin-bottom: 0.6rem;
   padding: 0.5rem;

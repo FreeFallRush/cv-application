@@ -1,6 +1,11 @@
 import "../styles/CVPreview.css";
 
-function CVPreview({ personalInfo, defaultInfo }) {
+function CVPreview({
+  personalInfo,
+  defaultInfo,
+  educationInfo,
+  defaultEducation,
+}) {
   return (
     <div className="cv-preview">
       <h2>Curriculum Vitae</h2>
@@ -35,6 +40,20 @@ function CVPreview({ personalInfo, defaultInfo }) {
             <p>
               <strong>Country: </strong>
               {personalInfo.country || defaultInfo.country}
+            </p>
+          </div>
+        </div>
+
+        <div className="educationInfo-section">
+          <h2>Education</h2>
+          <div className="educationInfo">
+            <p>
+              <strong>School: </strong>
+              {educationInfo.school || defaultEducation.school}
+            </p>
+            <p>
+              <strong>Degree: </strong>
+              {educationInfo.degree || defaultEducation.degree}
             </p>
           </div>
         </div>
