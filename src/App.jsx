@@ -125,7 +125,7 @@ function App() {
           <section className="practicalExperience-form">
             {practicalExperienceList.map((exp, index) => (
               <div key={exp.id} className="experience-entry">
-                <h3>Worl Experience {index + 1}</h3>
+                <h3>Work Experience {index + 1}</h3>
                 <PracticalExperienceForm
                   experienceInfo={exp}
                   onSubmit={(newExp) =>
