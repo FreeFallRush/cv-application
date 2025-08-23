@@ -147,6 +147,8 @@ function App() {
             defaultInfo={defaultInfo}
             educationInfo={educationInfoList}
             defaultEducation={defaultEducation}
+            experienceInfo={practicalExperienceList}
+            defaultExperience={defaultExperience}
           />
         </section>
       </main>

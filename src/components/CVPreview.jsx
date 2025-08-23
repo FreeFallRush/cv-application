@@ -6,6 +6,8 @@ function CVPreview({
   defaultInfo,
   educationInfo,
   defaultEducation,
+  experienceInfo,
+  defaultExperience,
 }) {
   return (
     <div className="cv-preview">
@@ -78,6 +80,47 @@ function CVPreview({
           ))
         ) : (
           <p>No education entries yet.</p>
+        )}
+      </div>
+
+      <div className="practicalExperience-section">
+        <h3>Work Experience</h3>
+        {experienceInfo.length > 0 ? (
+          experienceInfo.map((exp, index) => (
+            <div key={index} className="practicalExperience">
+              <h3>Work Experience {index + 1}</h3>
+              <p>
+                <strong>Company: </strong>{" "}
+                {exp.company || (index === 0 ? defaultExperience.company : "")}
+              </p>
+              <p>
+                <strong>Position: </strong>{" "}
+                {exp.position ||
+                  (index === 0 ? defaultExperience.position : "")}
+              </p>
+              <p>
+                <strong>Responsibilities: </strong>{" "}
+                {exp.position ||
+                  (index === 0 ? defaultExperience.responsibilities : "")}
+              </p>
+              <p>
+                <strong>Period: </strong>
+                {exp.startDate
+                  ? formatDate(exp.startDate)
+                  : index === 0
+                  ? formatDate(defaultExperience.startDate)
+                  : ""}{" "}
+                -{" "}
+                {exp.endDate
+                  ? formatDate(exp.endDate)
+                  : index === 0
+                  ? formatDate(defaultExperience.endDate)
+                  : ""}
+              </p>
+            </div>
+          ))
+        ) : (
+          <p>No work experience yet.</p>
         )}
       </div>
     </div>
