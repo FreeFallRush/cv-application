@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/FormStyles.css";
 
-function EducationInfoForm({ educationInfo, onSubmit }) {
+function EducationInfoForm({ educationInfo, onSubmit, onDelete }) {
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState(educationInfo);
 
@@ -72,6 +72,9 @@ function EducationInfoForm({ educationInfo, onSubmit }) {
             </div>
             <button type="submit" className="submit-btn">
               Submit
+            </button>
+            <button type="button" className="delete-btn" onClick={onDelete}>
+              Delete
             </button>
           </form>
         </>

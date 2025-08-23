@@ -22,14 +22,35 @@ function App() {
     endDate: "2024 September",
   };
   const [personalInfo, setPersonalInfo] = useState(defaultInfo);
-  const [educationInfo, setEducationInfo] = useState(defaultEducation);
+  const [educationInfoList, setEducationInfoList] = useState([
+    defaultEducation,
+  ]);
 
   const handlePersonalInfoSubmit = (newInfo) => {
     setPersonalInfo(newInfo);
   };
 
-  const handleEducationInfoSubmit = (newEdInfo) => {
-    setEducationInfo(newEdInfo);
+  const handleAddEducation = () => {
+    setEducationInfoList([
+      ...educationInfoList,
+      {
+        id: crypto.randomUUID(),
+        school: "",
+        degree: "",
+        startDate: "",
+        endDate: "",
+      },
+    ]);
+  };
+
+  const handleEducationInfoSubmit = (newEdInfo, index) => {
+    const updatedList = [...educationInfoList];
+    updatedList[index] = newEdInfo;
+    setEducationInfoList(updatedList);
+  };
+
+  const handleDeleteEducation = (index) => {
+    setEducationInfoList(educationInfoList.filter((_, i) => i !== index));
   };
 
   return (
@@ -43,11 +64,22 @@ function App() {
               onSubmit={handlePersonalInfoSubmit}
             />
           </section>
+
           <section className="educationInfo-form">
-            <EducationInfoForm
-              educationInfo={educationInfo}
-              onSubmit={handleEducationInfoSubmit}
-            />
+            {educationInfoList.map((edu, index) => (
+              <div key={edu.id} className="education-entry">
+                <h3>Education {index + 1}</h3>
+                <EducationInfoForm
+                  educationInfo={edu}
+                  onSubmit={(newEd) => handleEducationInfoSubmit(newEd, index)}
+                  onDelete={() => handleDeleteEducation(index)}
+                />
+              </div>
+            ))}
+
+            <button className="add-btn" onClick={handleAddEducation}>
+              + Add Education
+            </button>
           </section>
         </aside>
 
@@ -55,7 +87,7 @@ function App() {
           <CVPreview
             personalInfo={personalInfo}
             defaultInfo={defaultInfo}
-            educationInfo={educationInfo}
+            educationInfo={educationInfoList}
             defaultEducation={defaultEducation}
           />
         </section>
