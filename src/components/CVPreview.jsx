@@ -54,21 +54,25 @@ function CVPreview({
               <h3>Education {index + 1}</h3>
               <p>
                 <strong>School: </strong>
-                {edu.school || defaultEducation.school}
+                {edu.school || (index === 0 ? defaultEducation.school : "")}
               </p>
               <p>
                 <strong>Degree: </strong>
-                {edu.degree || defaultEducation.degree}
+                {edu.degree || (index === 0 ? defaultEducation.degree : "")}
               </p>
               <p>
                 <strong>Period: </strong>
                 {edu.startDate
                   ? formatDate(edu.startDate)
-                  : formatDate(defaultEducation.startDate)}{" "}
+                  : index === 0
+                  ? formatDate(defaultEducation.startDate)
+                  : ""}{" "}
                 -{" "}
                 {edu.endDate
                   ? formatDate(edu.endDate)
-                  : formatDate(defaultEducation.endDate)}
+                  : index === 0
+                  ? formatDate(defaultEducation.endDate)
+                  : ""}
               </p>
             </div>
           ))
