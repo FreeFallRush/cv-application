@@ -22,7 +22,8 @@
 }
 
 .edit-btn,
-.submit-btn {
+.submit-btn,
+.delete-btn {
   background-color: #292929;
   color: white;
   border: none;
@@ -35,7 +36,8 @@
 }
 
 .edit-btn:hover,
-.submit-btn:hover {
+.submit-btn:hover,
+.delete-btn:hover {
   background-color: #6e6e6e;
 }
 
@@ -54,4 +56,10 @@
 
 .form-group input {
   flex: 1;
+}
+
+.form-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }

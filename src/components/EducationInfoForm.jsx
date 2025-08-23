@@ -70,12 +70,14 @@ function EducationInfoForm({ educationInfo, onSubmit, onDelete }) {
                 onChange={handleChange}
               />
             </div>
-            <button type="submit" className="submit-btn">
-              Submit
-            </button>
-            <button type="button" className="delete-btn" onClick={onDelete}>
-              Delete
-            </button>
+            <div className="form-btns">
+              <button type="submit" className="submit-btn">
+                Submit
+              </button>
+              <button type="button" className="delete-btn" onClick={onDelete}>
+                Delete
+              </button>
+            </div>
           </form>
         </>
       )}
