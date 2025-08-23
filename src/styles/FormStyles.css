@@ -1,5 +1,6 @@
 .personalInfoForm,
-.educationInfoForm {
+.educationInfoForm,
+.practicalExperienceForm {
   /* margin-bottom: 1.5rem; */
   padding: 1rem;
   text-align: center;
@@ -10,12 +11,14 @@
 }
 
 .personalInfoForm h2,
-.educationInfoForm h2 {
+.educationInfoForm h2,
+.practicalExperienceForm h2 {
   margin-bottom: 1rem;
 }
 
 .personalInfoForm input,
-.educationInfoForm input {
+.educationInfoForm input,
+.practicalExperienceForm input {
   display: block;
   margin-bottom: 0.9rem;
   padding: 0.5rem;

@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import PersonalInfoForm from "./components/PersonalInfoForm";
 import EducationInfoForm from "./components/EducationInfoForm";
 import CVPreview from "./components/CVPreview";
+import PracticalExperienceForm from "./components/PracticalExperienceForm";
 import "./App.css";
 
 function App() {
@@ -21,9 +22,22 @@ function App() {
     startDate: "2020 August",
     endDate: "2024 September",
   };
+
+  const defaultExperience = {
+    company: "Click Link Ring",
+    position: "Software Engineer",
+    responsibilities:
+      "Developed cloud solutions and collaborated with international teams.",
+    startDate: "2019-06-01",
+    endDate: "2023-08-01",
+  };
+
   const [personalInfo, setPersonalInfo] = useState(defaultInfo);
   const [educationInfoList, setEducationInfoList] = useState([
     defaultEducation,
+  ]);
+  const [practicalExperienceList, setPracticalExperienceList] = useState([
+    defaultExperience,
   ]);
 
   const handlePersonalInfoSubmit = (newInfo) => {
@@ -53,6 +67,32 @@ function App() {
     setEducationInfoList(educationInfoList.filter((_, i) => i !== index));
   };
 
+  const handleAddPracticalExperience = () => {
+    setPracticalExperienceList([
+      ...practicalExperienceList,
+      {
+        id: crypto.randomUUID(),
+        company: "",
+        position: "",
+        responsibilities: "",
+        startDate: "",
+        endDate: "",
+      },
+    ]);
+  };
+
+  const handlePracticalExperienceSubmit = (newWorkExp, index) => {
+    const updatedList = [...practicalExperienceList];
+    updatedList[index] = newWorkExp;
+    setPracticalExperienceList(updatedList);
+  };
+
+  const handleDeletePracticalExperience = (index) => {
+    setPracticalExperienceList(
+      practicalExperienceList.filter((_, i) => i !== index)
+    );
+  };
+
   return (
     <>
       <Header />
@@ -79,6 +119,24 @@ function App() {
 
             <button className="add-btn" onClick={handleAddEducation}>
               + Add Education
+            </button>
+          </section>
+
+          <section className="practicalExperience-form">
+            {practicalExperienceList.map((exp, index) => (
+              <div key={exp.id} className="experience-entry">
+                <h3>Worl Experience {index + 1}</h3>
+                <PracticalExperienceForm
+                  experienceInfo={exp}
+                  onSubmit={(newExp) =>
+                    handlePracticalExperienceSubmit(newExp, index)
+                  }
+                  onDelete={() => handleDeletePracticalExperience(index)}
+                />
+              </div>
+            ))}
+            <button className="add-btn" onClick={handleAddPracticalExperience}>
+              + Add Work Experience
             </button>
           </section>
         </aside>
