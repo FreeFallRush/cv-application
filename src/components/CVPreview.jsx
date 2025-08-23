@@ -44,26 +44,37 @@ function CVPreview({
             </p>
           </div>
         </div>
+      </div>
 
-        <div className="educationInfo-section">
-          <h2>Education</h2>
-          <div className="educationInfo">
-            <p>
-              <strong>School: </strong>
-              {educationInfo.school || defaultEducation.school}
-            </p>
-            <p>
-              <strong>Degree: </strong>
-              {educationInfo.degree || defaultEducation.degree}
+      <div className="educationInfo-section">
+        <h2>Education</h2>
+        {educationInfo.length > 0 ? (
+          educationInfo.map((edu, index) => (
+            <div key={index} className="educationInfo">
+              <h3>Education {index + 1}</h3>
               <p>
-                <strong>Period: </strong> {formatDate(educationInfo.startDate)}{" "}
-                -{" "}
-                {formatDate(educationInfo.endDate) ||
-                  defaultEducation.startDate - defaultEducation.endDate}
+                <strong>School: </strong>
+                {edu.school || defaultEducation.school}
               </p>
-            </p>
-          </div>
-        </div>
+              <p>
+                <strong>Degree: </strong>
+                {edu.degree || defaultEducation.degree}
+              </p>
+              <p>
+                <strong>Period: </strong>
+                {edu.startDate
+                  ? formatDate(edu.startDate)
+                  : formatDate(defaultEducation.startDate)}{" "}
+                -{" "}
+                {edu.endDate
+                  ? formatDate(edu.endDate)
+                  : formatDate(defaultEducation.endDate)}
+              </p>
+            </div>
+          ))
+        ) : (
+          <p>No education entries yet.</p>
+        )}
       </div>
     </div>
   );
