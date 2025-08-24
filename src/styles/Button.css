@@ -13,3 +13,7 @@ button {
 button:hover {
   background-color: #6e6e6e;
 }
+
+.add-btn {
+  margin: 1.2rem 0;
+}

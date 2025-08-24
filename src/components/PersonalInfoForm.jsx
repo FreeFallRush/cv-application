@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./Button";
 import "../styles/FormStyles.css";
 
 function PersonalInfoForm({ personalInfo, onSubmit }) {
@@ -18,9 +19,9 @@ function PersonalInfoForm({ personalInfo, onSubmit }) {
   return (
     <div className="personalInfoForm">
       {!isEditing ? (
-        <button className="edit-btn" onClick={() => setIsEditing(true)}>
+        <Button variant="edit" onClick={() => setIsEditing(true)}>
           Add / Edit Personal Info
-        </button>
+        </Button>
       ) : (
         <>
           <h2>Personal Info</h2>
@@ -97,9 +98,9 @@ function PersonalInfoForm({ personalInfo, onSubmit }) {
               />
             </div>
 
-            <button type="submit" className="submit-btn">
+            <Button type="submit" variant="submit">
               Submit
-            </button>
+            </Button>
           </form>
         </>
       )}

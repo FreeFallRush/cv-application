@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./Button";
 import "../styles/FormStyles.css";
 
 function PracticalExperienceForm({ experienceInfo, onSubmit, onDelete }) {
@@ -18,9 +19,9 @@ function PracticalExperienceForm({ experienceInfo, onSubmit, onDelete }) {
   return (
     <div className="practicalExperienceForm">
       {!isEditing ? (
-        <button className="edit-btn" onClick={() => setIsEditing(true)}>
+        <Button variant="edit" onClick={() => setIsEditing(true)}>
           Add / Edit Work Experience
-        </button>
+        </Button>
       ) : (
         <>
           <h2>Work Experience</h2>
@@ -83,12 +84,12 @@ function PracticalExperienceForm({ experienceInfo, onSubmit, onDelete }) {
               />
             </div>
             <div className="form-btns">
-              <button type="submit" className="submit-btn">
+              <Button type="submit" variant="submit">
                 Submit
-              </button>
-              <button type="button" className="delete-btn" onClick={onDelete}>
+              </Button>
+              <Button type="button" variant="delete" onClick={onDelete}>
                 Delete
-              </button>
+              </Button>
             </div>
           </form>
         </>
