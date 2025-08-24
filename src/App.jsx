@@ -17,6 +17,7 @@ function App() {
   };
 
   const defaultEducation = {
+    id: crypto.randomUUID(),
     school: "Chicago High School",
     degree: "Social Sciences",
     startDate: "2020 August",
@@ -24,6 +25,7 @@ function App() {
   };
 
   const defaultExperience = {
+    id: crypto.randomUUID(),
     company: "Click Link Ring",
     position: "Software Engineer",
     responsibilities:

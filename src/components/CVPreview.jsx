@@ -52,7 +52,7 @@ function CVPreview({
         <h2>Education</h2>
         {educationInfo.length > 0 ? (
           educationInfo.map((edu, index) => (
-            <div key={index} className="educationInfo">
+            <div key={edu.id} className="educationInfo">
               <h3>Education {index + 1}</h3>
               <p>
                 <strong>School: </strong>
@@ -87,7 +87,7 @@ function CVPreview({
         <h3>Work Experience</h3>
         {experienceInfo.length > 0 ? (
           experienceInfo.map((exp, index) => (
-            <div key={index} className="practicalExperience">
+            <div key={exp.id} className="practicalExperience">
               <h3>Work Experience {index + 1}</h3>
               <p>
                 <strong>Company: </strong>{" "}
@@ -100,7 +100,7 @@ function CVPreview({
               </p>
               <p>
                 <strong>Responsibilities: </strong>{" "}
-                {exp.position ||
+                {exp.responsibilities ||
                   (index === 0 ? defaultExperience.responsibilities : "")}
               </p>
               <p>

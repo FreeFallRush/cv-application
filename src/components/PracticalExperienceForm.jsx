@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/FormStyles.css";
 
-function PracticalExperienceForm(experienceInfo, onSubmit, onDelete) {
+function PracticalExperienceForm({ experienceInfo, onSubmit, onDelete }) {
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState(experienceInfo);
 
