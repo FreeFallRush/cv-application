@@ -9,30 +9,30 @@ import "./App.css";
 
 function App() {
   const defaultInfo = {
-    firstName: "Click",
-    lastName: "Link",
-    email: "click@office.com",
-    phoneNumber: "+44 768 521 55",
-    city: "Rome",
-    country: "Italy",
+    firstName: "Lizzy",
+    lastName: "Smith",
+    email: "liz.smith@office.com",
+    phoneNumber: "+49 160 445 9821",
+    city: "Berlin",
+    country: "Germany",
   };
 
   const defaultEducation = {
     id: crypto.randomUUID(),
-    school: "Chicago High School",
-    degree: "Social Sciences",
-    startDate: "2020 August",
-    endDate: "2024 September",
+    school: "University of Lisbon",
+    degree: "Computer Engineering",
+    startDate: "2017 September",
+    endDate: "2021 June",
   };
 
   const defaultExperience = {
     id: crypto.randomUUID(),
-    company: "Click Link Ring",
-    position: "Software Engineer",
+    company: "Click Link Ring Ltd.",
+    position: "Full Stack Developer",
     responsibilities:
-      "Developed cloud solutions and collaborated with international teams.",
-    startDate: "2019-06-01",
-    endDate: "2023-08-01",
+      "Designed and deployed scalable web applications, integrating frontend interfaces with secure backend services in a fast-paced team environment.",
+    startDate: "2021-10-01",
+    endDate: "2025-07-01",
   };
 
   const [personalInfo, setPersonalInfo] = useState(defaultInfo);

@@ -49,7 +49,7 @@ function CVPreview({
       </div>
 
       <div className="educationInfo-section">
-        <h2>Education</h2>
+        <h3>Education</h3>
         {educationInfo.length > 0 ? (
           educationInfo.map((edu, index) => (
             <div key={edu.id} className="educationInfo">
