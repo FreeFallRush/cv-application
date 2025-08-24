@@ -100,6 +100,20 @@ function App() {
     window.print();
   };
 
+  const handleDownload = () => {
+    const element = document.querySelector(".preview-section");
+    if (!element) return;
+
+    import("html2pdf.js").then((html2pdf) => {
+      html2pdf.default(element, {
+        margin: 0.5,
+        filename: "My_CV.pdf",
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+      });
+    });
+  };
   return (
     <>
       <Header />
@@ -150,6 +164,9 @@ function App() {
           <div className="cv-actions">
             <Button variant="print" onClick={handlePrint}>
               Print CV
+            </Button>
+            <Button variant="download" onClick={handleDownload}>
+              Download CV
             </Button>
           </div>
         </aside>
