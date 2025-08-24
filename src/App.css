@@ -15,12 +15,12 @@
   flex-direction: column;
   align-items: center;
 }
-
-.educationInfo-form {
+.personalInfo-form,
+.educationInfo-form,
+.practicalExperience-form {
   background-color: rgb(219, 219, 219);
   padding: 0.6rem;
   border-bottom: 1px solid #292929;
-  /* text-align: center; */
 }
 
 h3 {
@@ -31,11 +31,12 @@ h3 {
   background-color: #292929;
   color: white;
   border: none;
-  padding: 0.6rem 1.2rem;
+  padding: 0.9rem 1.2rem;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
   margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
   transition: background 0.2s ease;
 }
 
