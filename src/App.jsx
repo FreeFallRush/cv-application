@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./components/Button";
 import Header from "./components/Header";
 import PersonalInfoForm from "./components/PersonalInfoForm";
 import EducationInfoForm from "./components/EducationInfoForm";
@@ -119,9 +120,9 @@ function App() {
               </div>
             ))}
 
-            <button className="add-btn" onClick={handleAddEducation}>
+            <Button variant="add" onClick={handleAddEducation}>
               + Add Education
-            </button>
+            </Button>
           </section>
 
           <section className="practicalExperience-form">
@@ -137,9 +138,9 @@ function App() {
                 />
               </div>
             ))}
-            <button className="add-btn" onClick={handleAddPracticalExperience}>
+            <Button variant="add" onClick={handleAddPracticalExperience}>
               + Add Work Experience
-            </button>
+            </Button>
           </section>
         </aside>
 
