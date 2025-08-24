@@ -6,25 +6,31 @@
 .sidebar {
   flex: 1;
   border: 3px solid black;
+  background-color: rgb(219, 219, 219);
 }
 
 .preview-section {
   flex: 3;
-  border: 1px solid rgb(179, 14, 14);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .personalInfo-form,
 .educationInfo-form,
 .practicalExperience-form {
-  background-color: rgb(219, 219, 219);
   padding: 0.6rem;
   border-bottom: 1px solid #292929;
 }
 
 h3 {
   margin-bottom: 0.5rem;
+}
+
+.cv-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
 }
 
 @media print {
