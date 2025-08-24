@@ -96,6 +96,10 @@ function App() {
     );
   };
 
+  const handlePrint = () => {
+    window.print();
+  };
+
   return (
     <>
       <Header />
@@ -142,6 +146,12 @@ function App() {
               + Add Work Experience
             </Button>
           </section>
+
+          <div className="cv-actions">
+            <Button variant="print" onClick={handlePrint}>
+              Print CV
+            </Button>
+          </div>
         </aside>
 
         <section className="preview-section">
