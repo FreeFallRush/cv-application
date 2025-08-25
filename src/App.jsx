@@ -24,8 +24,8 @@ function App() {
     school: "University of Lisbon",
     degree: "Computer Engineering",
     location: "Lisbon, Portugal",
-    startDate: "2017 September",
-    endDate: "2021 June",
+    startDate: "2017-09-04",
+    endDate: "2021-06-09",
   };
 
   const defaultExperience = {
