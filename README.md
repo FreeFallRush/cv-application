@@ -2,6 +2,8 @@
 
 Project: CV Application - from [The Odin Project - React Curriculum](https://www.theodinproject.com/lessons/node-path-react-new-cv-application)
 
+----> [view project](https://freefallrush-cv-application.netlify.app/) <----
+
 ### Assignment Summary
 
 - Create a new React project.
@@ -71,5 +73,7 @@ CSS (custom styles)
 
 Deployed on Netlify
 
----> [view project](https://freefallrush-cv-application.netlify.app/) <----
+---
+
+
 ```
