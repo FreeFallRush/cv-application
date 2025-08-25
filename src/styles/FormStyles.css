@@ -1,6 +1,7 @@
 .personalInfoForm,
 .educationInfoForm,
-.practicalExperienceForm {
+.practicalExperienceForm,
+.skillsForm {
   /* margin-bottom: 1.5rem; */
   padding: 1rem;
   text-align: center;
@@ -11,7 +12,8 @@
 
 .personalInfoForm h2,
 .educationInfoForm h2,
-.practicalExperienceForm h2 {
+.practicalExperienceForm h2,
+.skillsForm h2 {
   margin-bottom: 1rem;
 }
 
@@ -47,4 +49,8 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
+}
+
+textarea {
+  min-width: 90%;
 }

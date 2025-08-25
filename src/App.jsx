@@ -172,6 +172,10 @@ function App() {
             </Button>
           </section>
 
+          <section className="skills-form">
+            <SkillsForm skills={skills} onSubmit={handleSkillsSubmit} />
+          </section>
+
           <div className="cv-actions">
             <Button variant="print" onClick={handlePrint}>
               Print CV
@@ -180,10 +184,6 @@ function App() {
               Download CV
             </Button>
           </div>
-
-          <section className="skills-form">
-            <SkillsForm skills={skills} onSubmit={handleSkillsSubmit} />
-          </section>
         </aside>
 
         <section className="preview-section">

@@ -6,7 +6,6 @@
   flex-direction: column;
   text-align: center;
   font-size: 18px;
-  border: 1px solid green;
   background-color: #fafafa;
 }
 
@@ -41,7 +40,6 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.personalInfo-section h3,
 .educationInfo h3,
 .practicalExperience h3 {
   font-size: 1.3rem;
@@ -49,4 +47,32 @@
   margin-bottom: 1rem;
   border-bottom: 1px solid #ccc;
   padding-bottom: 0.3rem;
+  text-align: left;
+}
+
+.skills-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.skills-section h3 {
+  font-size: 1.3rem;
+  color: #444;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.3rem;
+  text-align: left;
+}
+
+.skills-list {
+  list-style-position: inside;
+  display: flex;
+  padding: 0.5rem 2.5rem;
+  gap: 1rem;
+  border: 1px solid red;
+}
+
+.skills-list li {
+  text-align: left;
+  font-size: 1rem;
 }
