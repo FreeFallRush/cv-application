@@ -8,6 +8,7 @@ function CVPreview({
   defaultEducation,
   experienceInfo,
   defaultExperience,
+  skills,
 }) {
   return (
     <div className="cv-preview">
@@ -121,6 +122,19 @@ function CVPreview({
           ))
         ) : (
           <p>No work experience yet.</p>
+        )}
+      </div>
+
+      <div className="skills-section">
+        <h3>Skills</h3>
+        {skills.length > 0 ? (
+          <ul className="skills-list">
+            {skills.map((skill, i) => (
+              <li key={i}>{skill}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>No skills added yet.</p>
         )}
       </div>
     </div>
