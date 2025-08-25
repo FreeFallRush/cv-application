@@ -1,0 +1,27 @@
+.footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #494949;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.react-logo {
+  height: 25px;
+  width: 25px;
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

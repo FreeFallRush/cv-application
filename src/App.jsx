@@ -6,6 +6,7 @@ import EducationInfoForm from "./components/EducationInfoForm";
 import CVPreview from "./components/CVPreview";
 import PracticalExperienceForm from "./components/PracticalExperienceForm";
 import SkillsForm from "./components/SkillsForm";
+import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
@@ -198,6 +199,7 @@ function App() {
           />
         </section>
       </main>
+      <Footer />
     </>
   );
 }
