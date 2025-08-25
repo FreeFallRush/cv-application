@@ -65,11 +65,24 @@
   text-align: left;
 }
 
-.practicalExperience,
+.practicalExperience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .educationInfo {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.5rem;
+}
+
+.educationInfo-group {
+  display: flex;
+  align-self: center;
+  gap: 2rem;
+  min-width: 60%;
 }
 
 .practicalExperience h4,
@@ -129,8 +142,22 @@
 
   .personalInfo-group {
     width: 100%;
+    margin-left: 0;
   }
 
+  .educationInfo-group,
+  .practicalExperience p {
+    flex-direction: column;
+    width: 100%;
+    min-width: unset;
+    gap: 0.5rem;
+  }
+
+  .educationInfo-group p,
+  .practicalExperience p {
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
   .skills-list {
     flex-direction: column;
     gap: 0.5rem;

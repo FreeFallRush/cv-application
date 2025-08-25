@@ -23,6 +23,7 @@ function App() {
     id: crypto.randomUUID(),
     school: "University of Lisbon",
     degree: "Computer Engineering",
+    location: "Lisbon, Portugal",
     startDate: "2017 September",
     endDate: "2021 June",
   };
@@ -61,6 +62,7 @@ function App() {
         id: crypto.randomUUID(),
         school: "",
         degree: "",
+        location: "",
         startDate: "",
         endDate: "",
       },

@@ -56,28 +56,39 @@ function CVPreview({
           educationInfo.map((edu, index) => (
             <div key={edu.id} className="educationInfo">
               <h4>Education {index + 1}</h4>
-              <p>
-                <strong>School: </strong>
-                {edu.school || (index === 0 ? defaultEducation.school : "")}
-              </p>
-              <p>
-                <strong>Degree: </strong>
-                {edu.degree || (index === 0 ? defaultEducation.degree : "")}
-              </p>
-              <p>
-                <strong>Period: </strong>
-                {edu.startDate
-                  ? formatDate(edu.startDate)
-                  : index === 0
-                  ? formatDate(defaultEducation.startDate)
-                  : ""}{" "}
-                -{" "}
-                {edu.endDate
-                  ? formatDate(edu.endDate)
-                  : index === 0
-                  ? formatDate(defaultEducation.endDate)
-                  : ""}
-              </p>
+              <div className="educationInfo-group">
+                <p>
+                  <strong>School: </strong>
+                  {edu.school || (index === 0 ? defaultEducation.school : "")}
+                </p>
+
+                <p>
+                  <strong>Degree: </strong>
+                  {edu.degree || (index === 0 ? defaultEducation.degree : "")}
+                </p>
+              </div>
+              <div className="educationInfo-group">
+                <p>
+                  <strong>Location: </strong>
+                  {edu.location ||
+                    (index === 0 ? defaultEducation.location : "")}
+                </p>
+
+                <p>
+                  <strong>Period: </strong>
+                  {edu.startDate
+                    ? formatDate(edu.startDate)
+                    : index === 0
+                    ? formatDate(defaultEducation.startDate)
+                    : ""}{" "}
+                  -{" "}
+                  {edu.endDate
+                    ? formatDate(edu.endDate)
+                    : index === 0
+                    ? formatDate(defaultEducation.endDate)
+                    : ""}
+                </p>
+              </div>
             </div>
           ))
         ) : (

@@ -51,6 +51,18 @@ function EducationInfoForm({ educationInfo, onSubmit, onDelete }) {
             </div>
 
             <div className="form-group">
+              <label htmlFor="location">Location: </label>
+              <input
+                id="location"
+                name="location"
+                type="text"
+                placeholder="Location"
+                value={formData.location}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="form-group">
               <label htmlFor="startDate">Start Date: </label>
               <input
                 id="startDate"
