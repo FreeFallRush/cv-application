@@ -5,6 +5,7 @@ import PersonalInfoForm from "./components/PersonalInfoForm";
 import EducationInfoForm from "./components/EducationInfoForm";
 import CVPreview from "./components/CVPreview";
 import PracticalExperienceForm from "./components/PracticalExperienceForm";
+import SkillsForm from "./components/SkillsForm";
 import "./App.css";
 
 function App() {
@@ -41,6 +42,11 @@ function App() {
   ]);
   const [practicalExperienceList, setPracticalExperienceList] = useState([
     defaultExperience,
+  ]);
+  const [skills, setSkills] = useState([
+    "Communication Skills",
+    "Knowing French",
+    "Photoshop",
   ]);
 
   const handlePersonalInfoSubmit = (newInfo) => {
@@ -114,6 +120,11 @@ function App() {
       });
     });
   };
+
+  const handleSkillsSubmit = (newSkills) => {
+    setSkills(newSkills);
+  };
+
   return (
     <>
       <Header />
@@ -169,6 +180,10 @@ function App() {
               Download CV
             </Button>
           </div>
+
+          <section className="skills-form">
+            <SkillsForm skills={skills} onSubmit={handleSkillsSubmit} />
+          </section>
         </aside>
 
         <section className="preview-section">
@@ -179,6 +194,7 @@ function App() {
             defaultEducation={defaultEducation}
             experienceInfo={practicalExperienceList}
             defaultExperience={defaultExperience}
+            skills={skills}
           />
         </section>
       </main>
