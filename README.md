@@ -39,7 +39,7 @@ Follow these steps to run the project locally.
 ### 1️⃣ Clone the repo
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
+git clone https://github.com/FreeFallRush/cv-application.git
 cd cv-application
 
 2️⃣ Install dependencies
