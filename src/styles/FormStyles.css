@@ -2,10 +2,10 @@
 .educationInfoForm,
 .practicalExperienceForm,
 .skillsForm {
-  /* margin-bottom: 1.5rem; */
   padding: 1rem;
   text-align: center;
 }
+
 .personalInfoForm {
   padding: 3rem 0;
 }
@@ -36,9 +36,10 @@
 }
 
 .form-group label {
-  flex: 0 0 120px;
-  margin-right: 0.6rem;
+  flex: 0 0 110px;
+  margin-right: 0.3rem;
   font-weight: bold;
+  text-align: left;
 }
 
 .form-group input {

@@ -1,7 +1,8 @@
 .cv-preview {
-  min-width: 80%;
-  margin: 4rem;
-  padding: 1rem 0;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -104,25 +105,34 @@
 }
 
 @media (max-width: 768px) {
-  .personalInfo strong,
-  .educationInfo strong,
-  .practicalExperience strong {
-    width: 100px;
+  .cv-preview {
+    width: 95%;
+    margin: 0.5rem auto;
+    padding: 1rem;
+    font-size: 14px;
   }
-  .practicalExperience p span:last-child {
-    max-width: 100%;
+
+  .cv-preview h2 {
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
   }
-  /* .personalInfo strong {
-    display: block;
-    margin-bottom: 0.2rem;
+
+  .cv-preview h3 {
+    font-size: 1.1rem;
+    padding-left: 0.5rem;
+  }
+
+  .personalInfo {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .personalInfo-group {
-    margin-left: 1rem;
-    text-align: left;
+    width: 100%;
   }
 
-  .personalInfo-group p {
-    padding: 0.5rem;
-  } */
+  .skills-list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
