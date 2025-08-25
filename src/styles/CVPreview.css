@@ -1,11 +1,11 @@
 .cv-preview {
   min-width: 80%;
   margin: 4rem;
-  padding: 1.3rem 0;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   background-color: #fafafa;
 }
 
@@ -14,65 +14,115 @@
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   margin-bottom: 2rem;
+  margin-top: 2rem;
   padding-bottom: 0.5rem;
   color: #222;
 }
 
+.cv-preview h3 {
+  font-size: 1.5rem;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #444;
+  border-left: 4px solid #666;
+  padding: 0.8rem;
+}
+
 .personalInfo {
   display: flex;
-  /* justify-content: center; */
-  justify-content: space-between;
-  padding: 0.8rem;
+  justify-content: space-around;
 }
 
 .personalInfo-group {
   margin-left: 2rem;
+  text-align: left;
+}
+
+.personalInfo-group p {
+  padding: 1rem;
 }
 
 .personalInfo,
 .educationInfo,
-.practicalExperience {
+.practicalExperience,
+.skills-section {
   border: 1px solid #ddd;
-
   padding: 12px 16px;
   margin-bottom: 12px;
   background-color: #fafafa;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.educationInfo h3,
-.practicalExperience h3 {
+.educationInfo h4,
+.practicalExperience h4 {
   font-size: 1.3rem;
   color: #444;
   margin-bottom: 1rem;
   border-bottom: 1px solid #ccc;
   padding-bottom: 0.3rem;
   text-align: left;
+}
+
+.practicalExperience,
+.educationInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.practicalExperience h4,
+.educationInfo h4 {
+  align-self: start;
+}
+
+.practicalExperience p,
+.educationInfo p {
+  width: 60%;
+  text-align: left;
+  margin-bottom: 1.5rem;
 }
 
 .skills-section {
   margin-top: 2rem;
   text-align: center;
-}
-
-.skills-section h3 {
-  font-size: 1.3rem;
-  color: #444;
-  margin-bottom: 1rem;
   border-bottom: 1px solid #ccc;
-  padding-bottom: 0.3rem;
-  text-align: left;
 }
 
 .skills-list {
   list-style-position: inside;
   display: flex;
+  justify-content: start;
   padding: 0.5rem 2.5rem;
   gap: 1rem;
-  border: 1px solid red;
 }
 
 .skills-list li {
   text-align: left;
   font-size: 1rem;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .personalInfo strong,
+  .educationInfo strong,
+  .practicalExperience strong {
+    width: 100px;
+  }
+  .practicalExperience p span:last-child {
+    max-width: 100%;
+  }
+  /* .personalInfo strong {
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+
+  .personalInfo-group {
+    margin-left: 1rem;
+    text-align: left;
+  }
+
+  .personalInfo-group p {
+    padding: 0.5rem;
+  } */
 }

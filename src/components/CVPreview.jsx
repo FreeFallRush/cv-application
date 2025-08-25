@@ -13,6 +13,7 @@ function CVPreview({
   return (
     <div className="cv-preview">
       <h2>Curriculum Vitae</h2>
+
       <div className="personalInfo-section">
         <h3>Personal Info</h3>
         <div className="personalInfo">
@@ -54,7 +55,7 @@ function CVPreview({
         {educationInfo.length > 0 ? (
           educationInfo.map((edu, index) => (
             <div key={edu.id} className="educationInfo">
-              <h3>Education {index + 1}</h3>
+              <h4>Education {index + 1}</h4>
               <p>
                 <strong>School: </strong>
                 {edu.school || (index === 0 ? defaultEducation.school : "")}
@@ -89,7 +90,7 @@ function CVPreview({
         {experienceInfo.length > 0 ? (
           experienceInfo.map((exp, index) => (
             <div key={exp.id} className="practicalExperience">
-              <h3>Work Experience {index + 1}</h3>
+              <h4>Work Experience {index + 1}</h4>
               <p>
                 <strong>Company: </strong>{" "}
                 {exp.company || (index === 0 ? defaultExperience.company : "")}
